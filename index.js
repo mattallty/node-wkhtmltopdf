@@ -24,7 +24,7 @@ function wkhtmltopdf(input, options, callback) {
   var extraKeys = [];
   var keys = Object.keys(options).filter(function(key) {
     if (key === 'toc' || key === 'cover' || key === 'page' ||
-        key === 'disableDottedLines') {
+        key === 'disableDottedLines' || key === 'tocTextSizeShrink') {
       extraKeys.push(key);
       return false;
     }
